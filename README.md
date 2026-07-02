@@ -103,7 +103,7 @@ Start the interactive dashboard locally:
 ```bash
 streamlit run src/app.py
 ```
-Recommended active workspace setting: `C:\Users\stuti\.gemini\antigravity\scratch\media_recommender`
+
 
 ---
 
