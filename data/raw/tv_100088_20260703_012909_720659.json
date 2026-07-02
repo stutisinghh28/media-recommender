@@ -1,0 +1,58 @@
+{
+  "id": 100088,
+  "name": "The Last of Us",
+  "overview": "Twenty years after modern civilization has been destroyed, Joel, a hardened survivor, is hired to smuggle Ellie, a 14-year-old girl, out of an oppressive quarantine zone.",
+  "first_air_date": "2023-01-15",
+  "vote_average": 8.6,
+  "vote_count": 4200,
+  "popularity": 180.2,
+  "poster_path": "/uKvH5G0w251Ey5J5y94Lg76sF52.jpg",
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 10765,
+      "name": "Sci-Fi & Fantasy"
+    },
+    {
+      "id": 10759,
+      "name": "Action & Adventure"
+    }
+  ],
+  "credits": {
+    "cast": [
+      {
+        "name": "Pedro Pascal",
+        "character": "Joel Miller",
+        "order": 0
+      },
+      {
+        "name": "Bella Ramsey",
+        "character": "Ellie Williams",
+        "order": 1
+      }
+    ]
+  },
+  "watch/providers": {
+    "results": {
+      "US": {
+        "flatrate": [
+          {
+            "provider_id": 8,
+            "provider_name": "Netflix",
+            "logo_path": "/p1E68616i62V80QNzpqoMRBECHO.jpg",
+            "display_priority": 1
+          },
+          {
+            "provider_id": 337,
+            "provider_name": "Disney Plus",
+            "logo_path": "/9A1q8MK6Z3w74v4TB4ihR6AX5xL.jpg",
+            "display_priority": 2
+          }
+        ]
+      }
+    }
+  }
+}

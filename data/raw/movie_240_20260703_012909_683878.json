@@ -1,0 +1,53 @@
+{
+  "id": 240,
+  "title": "The Godfather Part II",
+  "overview": "In the continuing saga of the Corleone crime family, a young Vito Corleone grows up in Sicily and in 1910s New York.",
+  "release_date": "1974-12-20",
+  "vote_average": 8.6,
+  "vote_count": 11500,
+  "popularity": 78.3,
+  "poster_path": "/bMadFzhjy9Ui6vfg2111u0ZPd7r.jpg",
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 80,
+      "name": "Crime"
+    }
+  ],
+  "credits": {
+    "cast": [
+      {
+        "name": "Al Pacino",
+        "character": "Michael Corleone",
+        "order": 0
+      },
+      {
+        "name": "Robert De Niro",
+        "character": "Vito Corleone (young)",
+        "order": 1
+      },
+      {
+        "name": "Robert Duvall",
+        "character": "Tom Hagen",
+        "order": 2
+      }
+    ]
+  },
+  "watch/providers": {
+    "results": {
+      "US": {
+        "flatrate": [
+          {
+            "provider_id": 15,
+            "provider_name": "Hulu",
+            "logo_path": "/8bq7JgH46G6JpHtA5fM8U17U5jK.jpg",
+            "display_priority": 1
+          }
+        ]
+      }
+    }
+  }
+}

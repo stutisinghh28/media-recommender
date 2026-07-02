@@ -1,0 +1,53 @@
+{
+  "id": 550,
+  "title": "Fight Club",
+  "overview": "A ticking-time-bomb insomniac and a slippery soap salesman channel male aggression into a shocking new form of therapy.",
+  "release_date": "1999-10-15",
+  "vote_average": 8.4,
+  "vote_count": 27000,
+  "popularity": 95.1,
+  "poster_path": "/adw6L11119xrVhyue56a0rtwR7t.jpg",
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    }
+  ],
+  "credits": {
+    "cast": [
+      {
+        "name": "Edward Norton",
+        "character": "The Narrator",
+        "order": 0
+      },
+      {
+        "name": "Brad Pitt",
+        "character": "Tyler Durden",
+        "order": 1
+      },
+      {
+        "name": "Helena Bonham Carter",
+        "character": "Marla Singer",
+        "order": 2
+      }
+    ]
+  },
+  "watch/providers": {
+    "results": {
+      "US": {
+        "flatrate": [
+          {
+            "provider_id": 8,
+            "provider_name": "Netflix",
+            "logo_path": "/p1E68616i62V80QNzpqoMRBECHO.jpg",
+            "display_priority": 1
+          }
+        ]
+      }
+    }
+  }
+}

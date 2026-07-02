@@ -1,0 +1,49 @@
+{
+  "id": 76331,
+  "name": "Succession",
+  "overview": "The Roy family is known for controlling the biggest media and entertainment company in the world. However, their world changes when their father steps down.",
+  "first_air_date": "2018-06-03",
+  "vote_average": 8.3,
+  "vote_count": 2800,
+  "popularity": 92.4,
+  "poster_path": "/succession_poster.jpg",
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "credits": {
+    "cast": [
+      {
+        "name": "Brian Cox",
+        "character": "Logan Roy",
+        "order": 0
+      },
+      {
+        "name": "Jeremy Strong",
+        "character": "Kendall Roy",
+        "order": 1
+      },
+      {
+        "name": "Sarah Snook",
+        "character": "Siobhan 'Shiv' Roy",
+        "order": 2
+      }
+    ]
+  },
+  "watch/providers": {
+    "results": {
+      "US": {
+        "flatrate": [
+          {
+            "provider_id": 350,
+            "provider_name": "Apple TV Plus",
+            "logo_path": "/6nusrfQLpVKuDG47nJ7uV75Q0tV.jpg",
+            "display_priority": 1
+          }
+        ]
+      }
+    }
+  }
+}

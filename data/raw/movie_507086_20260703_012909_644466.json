@@ -1,0 +1,57 @@
+{
+  "id": 507086,
+  "title": "Jurassic World Dominion",
+  "overview": "Four years after Isla Nublar was destroyed, dinosaurs now live\u2014and hunt\u2014alongside humans all over the world.",
+  "release_date": "2022-06-01",
+  "vote_average": 6.9,
+  "vote_count": 5200,
+  "popularity": 75.8,
+  "poster_path": "/kAVR2Z8vHkvbrh3JZAx6G0H8g93.jpg",
+  "genres": [
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 12,
+      "name": "Adventure"
+    },
+    {
+      "id": 878,
+      "name": "Science Fiction"
+    }
+  ],
+  "credits": {
+    "cast": [
+      {
+        "name": "Chris Pratt",
+        "character": "Owen Grady",
+        "order": 0
+      },
+      {
+        "name": "Bryce Dallas Howard",
+        "character": "Claire Dearing",
+        "order": 1
+      },
+      {
+        "name": "Laura Dern",
+        "character": "Dr. Ellie Sattler",
+        "order": 2
+      }
+    ]
+  },
+  "watch/providers": {
+    "results": {
+      "US": {
+        "flatrate": [
+          {
+            "provider_id": 8,
+            "provider_name": "Netflix",
+            "logo_path": "/p1E68616i62V80QNzpqoMRBECHO.jpg",
+            "display_priority": 1
+          }
+        ]
+      }
+    }
+  }
+}

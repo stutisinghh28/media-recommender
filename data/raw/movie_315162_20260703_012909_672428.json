@@ -1,0 +1,65 @@
+{
+  "id": 315162,
+  "title": "Puss in Boots: The Last Wish",
+  "overview": "Puss in Boots discovers that his passion for adventure has taken its toll: he has burned through eight of his nine lives, leaving him with only one life left.",
+  "release_date": "2022-12-07",
+  "vote_average": 8.3,
+  "vote_count": 6800,
+  "popularity": 92.7,
+  "poster_path": "/kuf6HgcVUGlUW3Zrxj8OUtXQI7x.jpg",
+  "genres": [
+    {
+      "id": 16,
+      "name": "Animation"
+    },
+    {
+      "id": 12,
+      "name": "Adventure"
+    },
+    {
+      "id": 35,
+      "name": "Comedy"
+    },
+    {
+      "id": 10751,
+      "name": "Family"
+    },
+    {
+      "id": 14,
+      "name": "Fantasy"
+    }
+  ],
+  "credits": {
+    "cast": [
+      {
+        "name": "Antonio Banderas",
+        "character": "Puss in Boots (voice)",
+        "order": 0
+      },
+      {
+        "name": "Salma Hayek",
+        "character": "Kitty Softpaws (voice)",
+        "order": 1
+      },
+      {
+        "name": "Harvey Guill\u00e9n",
+        "character": "Perrito (voice)",
+        "order": 2
+      }
+    ]
+  },
+  "watch/providers": {
+    "results": {
+      "US": {
+        "flatrate": [
+          {
+            "provider_id": 337,
+            "provider_name": "Disney Plus",
+            "logo_path": "/9A1q8MK6Z3w74v4TB4ihR6AX5xL.jpg",
+            "display_priority": 1
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": 60625,
+  "name": "Rick and Morty",
+  "overview": "An relations-driven animated series about the infinite adventures of Rick, a genius-alcoholic scientist, and his grandson Morty, a normal 14-year-old boy.",
+  "first_air_date": "2013-12-02",
+  "vote_average": 8.7,
+  "vote_count": 8700,
+  "popularity": 160.5,
+  "poster_path": "/84iaiuG3w74v4TB4ihR6AX5xL.jpg",
+  "genres": [
+    {
+      "id": 16,
+      "name": "Animation"
+    },
+    {
+      "id": 35,
+      "name": "Comedy"
+    },
+    {
+      "id": 10765,
+      "name": "Sci-Fi & Fantasy"
+    }
+  ],
+  "credits": {
+    "cast": [
+      {
+        "name": "Justin Roiland",
+        "character": "Rick / Morty (voice)",
+        "order": 0
+      },
+      {
+        "name": "Chris Parnell",
+        "character": "Jerry Smith (voice)",
+        "order": 1
+      }
+    ]
+  },
+  "watch/providers": {
+    "results": {
+      "US": {
+        "flatrate": [
+          {
+            "provider_id": 15,
+            "provider_name": "Hulu",
+            "logo_path": "/8bq7JgH46G6JpHtA5fM8U17U5jK.jpg",
+            "display_priority": 1
+          },
+          {
+            "provider_id": 8,
+            "provider_name": "Netflix",
+            "logo_path": "/p1E68616i62V80QNzpqoMRBECHO.jpg",
+            "display_priority": 2
+          }
+        ]
+      }
+    }
+  }
+}
