@@ -1,6 +1,4 @@
--- ====================================================================
--- RAW DATA LAYER
--- ====================================================================
+
 CREATE TABLE IF NOT EXISTS raw_api_responses (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     endpoint TEXT NOT NULL,
@@ -9,9 +7,9 @@ CREATE TABLE IF NOT EXISTS raw_api_responses (
     fetched_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- ====================================================================
+
 -- STAGING DATA LAYER (Temporary tables cleared/refreshed during ETL)
--- ====================================================================
+
 DROP TABLE IF EXISTS staged_genres;
 CREATE TABLE staged_genres (
     genre_id INTEGER NOT NULL,
@@ -63,9 +61,8 @@ CREATE TABLE staged_title_providers (
     PRIMARY KEY (tmdb_id, media_type, provider_id)
 );
 
--- ====================================================================
+
 -- CURATED (PRODUCTION) DATA LAYER
--- ====================================================================
 
 -- Users Table
 CREATE TABLE IF NOT EXISTS users (
