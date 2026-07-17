@@ -1,40 +1,58 @@
--- ====================================================================
--- SQL RECOMMENDATION QUERIES
--- ====================================================================
-
--- --------------------------------------------------------------------
--- QUERY: Get Multi-User or Single-User Recommendations
+-- QUERY: Get Recommendations for One or More Users
 --
--- RATIONALE & SCORING MATHEMATICS:
--- 1. USER PREFERENCE WEIGHTING (CTE: group_genres)
---    We assign weights to each user's top 4 preferred genres:
---      - Preference Order 1 (Top Genre) = 4 Points
---      - Preference Order 2 = 3 Points
---      - Preference Order 3 = 2 Points
---      - Preference Order 4 = 1 Point
---    For group recommendations, we sum these weights across all target users.
---    This naturally prioritizes genres that are highly rated by multiple users
---    (e.g., if User A ranks Sci-Fi 1 [4 pts] and User B ranks Sci-Fi 1 [4 pts],
---    Sci-Fi gets a combined weight of 8).
+-- HOW THE RECOMMENDATION SYSTEM WORKS
 --
--- 2. TITLE PREFERENCE SCORING (CTE: title_preference_scores)
---    For each title, we sum the combined weight of its matching genres.
---    Score = SUM(genre_weight for each matching genre).
+-- 1. CALCULATING USER PREFERENCES (CTE: group_genres)
+--    Every user has four favourite genres ranked by preference.
+--    Instead of treating all genres equally, higher-ranked genres are given
+--    more importance using a weighted scoring system:
 --
--- 3. EXCLUSION OF WATCHED CONTENT (Anti-Join / NOT EXISTS)
---    We filter out any titles that have already been watched by ANY of the
---    selected users.
+--      • 1st favourite genre → 4 points
+--      • 2nd favourite genre → 3 points
+--      • 3rd favourite genre → 2 points
+--      • 4th favourite genre → 1 point
 --
--- 4. DETERMINISTIC TIE-BREAKING AND RANKING (DENSE_RANK() Window Function)
---    To ensure a fully deterministic, explainable, and consistent recommendation list,
---    ranking is computed in SQLite using DENSE_RANK() with the following order:
---      - Primary Sort: Preference Score (DESC) - How well it matches user tastes.
---      - Tie-Break 1:  TMDB Rating (DESC)      - Quality / Average User Rating.
---      - Tie-Break 2:  Popularity (DESC)       - Popularity / Virality index from TMDB.
--- --------------------------------------------------------------------
-
--- :user_ids is a parameterized placeholder representing a comma-separated list of user IDs.
--- In SQLite, parameters are bound dynamically. In python, we will construct the IN clause.
+--    If recommendations are being generated for multiple users, the genre
+--    scores are added together. This makes genres liked by several users
+--    naturally receive a higher overall score.
+--
+--    Example:
+--    If two users both have Sci-Fi as their top genre,
+--    Sci-Fi receives 4 + 4 = 8 points.
+--
+--
+-- 2. SCORING EACH TITLE (CTE: title_preference_scores)
+--    Every movie or show is compared with the combined genre preferences.
+--    The recommendation score is simply the sum of the weights of all
+--    matching genres.
+--
+--    Higher score = Better match with the users' interests.
+--
+--
+-- 3. REMOVING ALREADY WATCHED TITLES
+--    Recommendations should only contain new content.
+--    Any title already watched by one or more of the selected users is
+--    excluded using a NOT EXISTS condition.
+--
+--
+-- 4. RANKING THE RECOMMENDATIONS
+--    After calculating the preference score, the results are ranked using
+--    DENSE_RANK() to keep the output consistent and deterministic.
+--
+--    The ranking follows this order:
+--      1. Preference Score (Highest first)
+--         → Titles that best match user preferences appear first.
+--
+--      2. TMDB Rating (Highest first)
+--         → If two titles have the same score, the higher-rated one is preferred.
+--
+--      3. Popularity (Highest first)
+--         → If there is still a tie, the more popular title is shown first.
+--
+--
+-- :user_ids is a parameter representing one or more user IDs.
+-- During execution, Python dynamically builds the IN clause before passing
+-- the query to SQLite.
 
 WITH group_genres AS (
     -- Collect and aggregate preferences for all selected users
