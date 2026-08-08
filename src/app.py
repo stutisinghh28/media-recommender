@@ -169,9 +169,8 @@ if not users:
     st.stop()
 
 
-# ====================================================================
 # PAGE 1: RECOMMENDATIONS (SINGLE-USER & GROUP MODE)
-# ====================================================================
+
 if app_mode == "🎉 Recommendations":
     st.markdown("## 🍿 Suggest Must-Watch Titles")
     st.write("Excludes already-watched titles. Scores based on combined genre priorities, rating, and popularity.")
@@ -396,11 +395,10 @@ elif app_mode == "👤 Profile & Preferences":
                 st.rerun()
 
 
-# ====================================================================
+
 # PAGE 3: ETL & DATA FLOW DIAGNOSTICS
-# ====================================================================
-elif app_mode == "⚙️ Data pipeline (ELT)":
-    st.markdown("## ⚙️ Data Flow & Database Diagnostics")
+elif app_mode == " Data pipeline (ELT)":
+    st.markdown(" Data Flow & Database Diagnostics")
     
     st.markdown("""
     This screen displays details about the Raw → Staged → Curated database architecture.
@@ -446,9 +444,9 @@ elif app_mode == "⚙️ Data pipeline (ELT)":
 
     # Reseed option
     st.markdown("---")
-    st.markdown("### ⚠️ Danger Zone")
+    st.markdown("###  Danger Zone")
     st.caption("Clears database tables and resets schemas to the default mock dataset.")
-    if st.button("🚨 Reset & Reseed Database Schema"):
+    if st.button(" Reset & Reseed Database Schema"):
         init_db(force_reseed=True)
         st.success("Database has been reset and seeded to defaults!")
         st.rerun()
